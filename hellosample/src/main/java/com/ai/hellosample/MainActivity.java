@@ -1,16 +1,12 @@
 package com.ai.hellosample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.ai.hellosample.tools.Util;
 
 public class MainActivity extends AppCompatActivity {
-
-    static {
-        System.loadLibrary("Hello-Util");
-    }
 
     private TextView vText;
 
@@ -19,6 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         vText = findViewById(R.id.content_txt);
-        vText.setText(Util.getDeviceId());
+        vText.setText(Util.dynamicGenerateKey("rty"));
     }
 }

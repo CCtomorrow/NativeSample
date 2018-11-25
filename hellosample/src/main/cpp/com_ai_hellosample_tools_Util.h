@@ -7,12 +7,17 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved);
+JNIEXPORT void JNICALL JNI_OnUnload(JavaVM *vm, void *reserved);
+
 /*
  * Class:     com_ai_hellosample_tools_Util
  * Method:    getDeviceId
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_ai_hellosample_tools_Util_getDeviceId(JNIEnv *, jclass);
+JNIEXPORT
+jstring JNICALL Java_com_ai_hellosample_tools_Util_getDeviceId(JNIEnv *, jclass);
 #ifdef __cplusplus
 }
 #endif

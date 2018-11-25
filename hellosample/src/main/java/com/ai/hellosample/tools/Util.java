@@ -9,6 +9,11 @@ package com.ai.hellosample.tools;
  */
 public class Util {
 
+    static {
+        System.loadLibrary("Hello-Util");
+    }
+
     public static native String getDeviceId();
 
+    public static native String dynamicGenerateKey(String name);
 }
